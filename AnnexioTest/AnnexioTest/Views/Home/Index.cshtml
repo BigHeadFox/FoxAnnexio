@@ -1,0 +1,80 @@
+﻿@model IEnumerable<AnnexioTest.Models.AllCountriesModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Countries</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/datatables.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+
+    <link href="~/CSS/datatables.min.css" rel="stylesheet" />
+    <link href="~/CSS/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="divTitle">
+        ANNEXIO CANDIDATE TEST - PETE FOX
+    </div>
+    <div class="table-sortable">
+        <table id="tblCountries">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Region)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Subregion)
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <span class="tdCountry">@Html.DisplayFor(modelItem => item.Name)</span>
+                        </td>
+
+                        <td>
+                            <span class="tdRegion">@Html.DisplayFor(modelItem => item.Region)</span>
+                        </td>
+
+                        <td>
+                            <span class="tdSubregion">@Html.DisplayFor(modelItem => item.Subregion)</span>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div id="divMoreInfo">
+
+    </div>
+    <div id="divDisable">
+
+    </div>
+</body>
+</html>

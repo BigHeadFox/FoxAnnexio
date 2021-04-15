@@ -1,0 +1,51 @@
+﻿body {
+    font-family: 'Karla', sans-serif;
+}
+
+.divTitle {
+    padding:10px;
+    font-size:36px;
+    border-bottom:2px solid black;
+    margin-bottom:40px
+}
+
+table.dataTable thead tr th {
+    text-align:left;
+}
+
+table.dataTable tbody tr.odd {
+    background-color: #eee;
+}
+
+td:hover {
+    background-color:#eef;
+    cursor:pointer;
+}
+
+.borderCountry:hover, .regionCountry:hover, .subregionName:hover, .regionName:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#divMoreInfo {
+    position:fixed;
+    left:120px;
+    top:120px;
+    right:120px;
+    padding:10px 20px 20px 20px;
+    background:#fff;
+    z-index:3;
+    box-shadow:0px 0px 8px #888888;
+    -webkit-box-shadow:0px 0px 20px black;
+}
+
+#divDisable {
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color:black;
+    opacity:0.7;
+    z-index:2;
+}
